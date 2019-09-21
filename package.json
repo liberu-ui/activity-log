@@ -2,7 +2,7 @@
   "name": "@enso-ui/activity-log",
   "version": "1.0.0",
   "description": "Basic Activity Log package",
-  "main": "src/bulma/pages/activity-log/Index.vue",
+  "main": "src/bulma/pages/activityLog/Index.vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
