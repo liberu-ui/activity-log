@@ -1,6 +1,6 @@
 {
   "name": "@enso-ui/activity-log",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic Activity Log package",
   "main": "src/bulma/pages/activityLog/Index.vue",
   "scripts": {
