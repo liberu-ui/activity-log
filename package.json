@@ -31,7 +31,7 @@
     "webpack-cli": "^3.2.1"
   },
   "dependencies": {
-    "@enso-ui/bulma": "~1.2.0",
+    "@enso-ui/bulma": "~2.0.0",
     "@fortawesome/free-solid-svg-icons": "^5.2.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.2",
     "@enso-ui/forms": "~1.2.0",
