@@ -48,7 +48,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import {
     faSyncAlt, faPlus, faPencilAlt, faTrashAlt, faFlag,
 } from '@fortawesome/free-solid-svg-icons';
-import format from '@core-modules/plugins/date-fns/format';
+import format from '@enso-ui/ui/src/modules/plugins/date-fns/format';
 import Event from './Event.vue';
 
 library.add(faSyncAlt, faPlus, faPencilAlt, faTrashAlt, faFlag);
