@@ -7,5 +7,6 @@ export default {
     meta: {
         breadcrumb: 'activity log',
         title: 'Activity Log',
+        keepAlive: true,
     },
 };
