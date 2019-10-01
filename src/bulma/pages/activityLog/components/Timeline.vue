@@ -1,29 +1,24 @@
 <template>
-    <div class="box has-background-light">
-        <div class="is-clearfix"/>
+    <div class="activity-log">
         <h4 class="title is-4 has-text-centered"
             v-if="!feed.length">
             {{ i18n('No activity found') }}
         </h4>
         <div :class="['timeline animated fadeIn', {'is-centered':!isTouch}]"
             v-for="(day, index) in feed"
-            :key="index"
+            :key="`${day}-${index}`"
             v-else>
-            <header class="timeline-header title is-4">
-                {{ formatDate(day.date) }}
+            <header class="timeline-header">
+                <span class="tag is-medium is-bold is-primary">
+                    {{ formatDate(day.date) }}
+                </span>
             </header>
             <div class="timeline-item"
-                v-for="event in day.list"
+                v-for="event in day.entries"
                 :key="event.id">
-                <div :class="[
-                        'timeline-marker is-icon',
-                        { 'is-success': event.action.type === 1 },
-                        { 'is-warning': event.action.type === 2 },
-                        { 'is-danger': event.action.type === 3 },
-                        { 'is-info': event.action.type === 4 },
-                    ]">
+                <div class="timeline-marker is-icon is-info">
                     <span class="icon is-small has-text-white">
-                        <fa :icon="icon(event.action)"
+                        <fa :icon="event.meta.icon"
                             size="xs"/>
                     </span>
                 </div>
@@ -46,12 +41,12 @@
 import { mapState } from 'vuex';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
-    faSyncAlt, faPlus, faPencilAlt, faTrashAlt, faFlag,
+    faSpinner, faSyncAlt, faPlus, faPencilAlt, faTrashAlt, faFlag,
 } from '@fortawesome/free-solid-svg-icons';
 import format from '@enso-ui/ui/src/modules/plugins/date-fns/format';
 import Event from './Event.vue';
 
-library.add(faSyncAlt, faPlus, faPencilAlt, faTrashAlt, faFlag);
+library.add(faSpinner, faSyncAlt, faPlus, faPencilAlt, faTrashAlt, faFlag);
 
 export default {
     name: 'Timeline',
@@ -80,39 +75,14 @@ export default {
 
     methods: {
         formatDate(date) {
-            return format(date, 'l, F d');
-        },
-        icon({ icon, type }) {
-            if (icon) {
-                return icon;
-            }
-
-            switch (type) {
-            case 1:
-                return 'plus';
-            case 2:
-                return 'pencil-alt';
-            case 3:
-                return 'trash-alt';
-            case 4:
-                return 'flag';
-            default:
-                return 'exclamation';
-            }
+            return format(date, 'l F d');
         },
     },
 };
 </script>
 
-<style lang="scss" scoped>
-    .timeline {
-        .timeline-header {
-            max-width: 12em;
-            width: unset;
-        }
-
-        .timeline-item .timeline-content {
-            align-items: flex-start;
-        }
+<style lang="scss">
+    .activity-log .timeline .timeline-content {
+        width: 100%;
     }
 </style>

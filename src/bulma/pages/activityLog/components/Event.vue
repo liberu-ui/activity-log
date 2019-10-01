@@ -1,33 +1,29 @@
 <template>
-    <article class="media">
+    <article class="media box has-background-light has-padding-medium raises-on-hover">
         <figure class="media-left has-margin-top-small">
             <p class="image is-32x32">
-                <img class="is-rounded"
-                    :src="route('core.avatars.show', $event.author.avatarId)">
+                <img class="is-rounded is-clickable"
+                    :src="route('core.avatars.show', event.owner.avatarId)"
+                    @click="$router.push({
+                        name: 'administration.users.show',
+                        params: { user: event.owner.id },
+                    })">
             </p>
         </figure>
         <div class="event">
             <p class="heading">
-{{ event.time }}
+                {{ event.time }}
             </p>
-            <message :event="event"
-                @show-profile="$router.push({
-                    name: 'administration.users.show',
-                    params: { user: $event.author.id },
-                })"/>
+            <p v-html="message"/>
         </div>
     </article>
 </template>
 
 <script>
-import Message from './Message.vue';
-
 export default {
     name: 'Event',
 
-    components: { Message },
-
-    inject: ['route'],
+    inject: ['i18n', 'route'],
 
     props: {
         event: {
@@ -35,11 +31,16 @@ export default {
             required: true,
         },
     },
+
+    computed: {
+        message() {
+            const attributes = this.event.meta.attributes;
+
+            return Object.keys(attributes)
+                .reduce((message, attribute) => message.split(`:${attribute}`)
+                    .join(`<strong>${attributes[attribute]}</strong>`),
+                this.i18n(this.event.meta.message));
+        },
+    },
 };
 </script>
-
-<style lang="scss">
-    .media > .event > .author {
-        font-weight: 600;
-    }
-</style>
