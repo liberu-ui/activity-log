@@ -36,7 +36,7 @@
 
 <script>
 import { mapState } from 'vuex';
-import { EnsoDateFilter, EnsoSelectFilter as SelectFilter } from '@enso-ui/bulma';
+import { EnsoDateFilter, EnsoSelectFilter as SelectFilter } from '@enso-ui/select/bulma';
 
 export default {
     name: 'Filters',
