@@ -16,7 +16,8 @@
             <div class="timeline-item"
                 v-for="event in day.entries"
                 :key="event.id">
-                <div class="timeline-marker is-icon is-info">
+                <div class="timeline-marker is-icon"
+                    :class="event.meta.iconClass">
                     <span class="icon is-small has-text-white">
                         <fa :icon="event.meta.icon"
                             size="xs"/>
@@ -84,5 +85,8 @@ export default {
 <style lang="scss">
     .activity-log .timeline .timeline-content {
         width: 100%;
+        .box {
+            width:100%;
+        }
     }
 </style>

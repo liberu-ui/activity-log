@@ -34,12 +34,27 @@ export default {
 
     computed: {
         message() {
-            const attributes = this.event.meta.attributes;
-
-            return Object.keys(attributes)
+            return Object.keys(this.event.meta.attributes)
                 .reduce((message, attribute) => message.split(`:${attribute}`)
-                    .join(`<strong>${attributes[attribute]}</strong>`),
-                this.i18n(this.event.meta.message));
+                    .join(this.label(attribute)),
+                this.parsedMessage);
+        },
+        parsedMessage() {
+            return Array.isArray(this.event.meta.message)
+                ? this.event.meta.message
+                    .map(segment => this.i18n(segment))
+                    .join(' ')
+                : this.event.meta.message;
+        },
+    },
+
+    methods: {
+        label(attribute) {
+            const {attributes} = this.event.meta;
+
+            return ['user', 'label'].includes(attribute)
+                ? `<strong>${attributes[attribute]}</strong>`
+                : attributes[attribute];
         },
     },
 };
