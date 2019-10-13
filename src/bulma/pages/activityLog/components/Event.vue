@@ -50,7 +50,7 @@ export default {
 
     methods: {
         label(attribute) {
-            const {attributes} = this.event.meta;
+            const { attributes } = this.event.meta;
 
             return ['user', 'label'].includes(attribute)
                 ? `<strong>${attributes[attribute]}</strong>`
