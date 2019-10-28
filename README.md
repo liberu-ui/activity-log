@@ -13,14 +13,9 @@ The component cannot be used outside of the Enso ecosystem.
 
 For live examples and demos, you may visit [laravel-enso.com](https://www.laravel-enso.com)
 
-Check the full documentation at  [docs.laravel-enso.com](https://docs.laravel-enso.com).
-
-### Installation
-
-Install the package:
-```
-yarn add @enso-ui/activity-log
-```
+### Installation, Configuration & Usage
+ 
+ Be sure to check out the full documentation for this package available at [docs.laravel-enso.com](https://docs.laravel-enso.com/frontend/activity-log.html)
 
 ## Contributions
 
