@@ -22,7 +22,7 @@
   "homepage": "https://github.com/enso-ui/activity-log#readme",
   "dependencies": {
     "@enso-ui/filters": "1.3.x",
-    "@enso-ui/ui": "2.2.x",
+    "@enso-ui/ui": "2.3.x",
     "@fortawesome/fontawesome-svg-core": "^1.2.2",
     "@fortawesome/free-solid-svg-icons": "^5.2.0",
     "v-tooltip": "^2.0.0-rc.32",
