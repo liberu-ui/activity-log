@@ -3,7 +3,7 @@
         <figure class="media-left has-margin-top-small">
             <p class="image is-32x32">
                 <img class="is-rounded is-clickable"
-                    :src="route('core.avatars.show', event.owner.avatarId)"
+                    :src="route('core.avatars.show', event.owner.avatar.id)"
                     @click="$router.push({
                         name: 'administration.users.show',
                         params: { user: event.owner.id },
