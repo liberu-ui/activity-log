@@ -1,6 +1,6 @@
 <template>
-    <article class="media box has-background-light has-padding-medium raises-on-hover">
-        <figure class="media-left has-margin-top-small">
+    <article class="media box has-background-light p-2 raises-on-hover">
+        <figure class="media-left mt-1">
             <p class="image is-32x32">
                 <img class="is-rounded is-clickable"
                     :src="route('core.avatars.show', event.owner.avatar.id)"
@@ -42,7 +42,7 @@ export default {
         parsedMessage() {
             return Array.isArray(this.event.meta.message)
                 ? this.event.meta.message
-                    .map(segment => this.i18n(segment))
+                    .map((segment) => this.i18n(segment))
                     .join(' ')
                 : this.event.meta.message;
         },

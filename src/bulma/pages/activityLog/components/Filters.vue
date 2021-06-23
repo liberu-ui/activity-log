@@ -10,10 +10,10 @@
                 <fa icon="sync-alt"/>
             </span>
         </button>
-        <enso-date-filter class="box raises-on-hover has-margin-top-large"
+        <enso-date-filter class="box raises-on-hover mt-3"
             value="today"
             @update="filters.interval = $event"/>
-        <div class="box has-padding-medium raises-on-hover has-background-light">
+        <div class="box p-2 raises-on-hover has-background-light">
             <p class="has-text-centered">
                 <strong>{{ i18n('What') }}</strong>
             </p>
