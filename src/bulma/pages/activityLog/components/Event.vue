@@ -7,7 +7,7 @@
                     @click="$router.push({
                         name: 'administration.users.show',
                         params: { user: event.owner.id },
-                    }).catch(routeErrorHandler)">
+                    }).catch(routerErrorHandler)">
             </p>
         </figure>
         <div class="event">
@@ -23,7 +23,7 @@
 export default {
     name: 'Event',
 
-    inject: ['i18n', 'route', 'routeErrorHandler'],
+    inject: ['i18n', 'route', 'routerErrorHandler'],
 
     props: {
         event: {
