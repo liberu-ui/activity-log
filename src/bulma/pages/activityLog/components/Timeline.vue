@@ -40,6 +40,7 @@
 
 <script>
 import { mapState } from 'vuex';
+import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
     faSpinner, faSyncAlt, faPlus, faPencilAlt, faTrashAlt, faFlag,
@@ -52,7 +53,7 @@ library.add(faSpinner, faSyncAlt, faPlus, faPencilAlt, faTrashAlt, faFlag);
 export default {
     name: 'Timeline',
 
-    components: { Event },
+    components: { Fa, Event },
 
     inject: ['i18n'],
 
