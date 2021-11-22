@@ -4,7 +4,7 @@
             v-if="!feed.length">
             {{ i18n('No activity found') }}
         </h4>
-        <div :class="['timeline animated fadeIn', {'is-centered':!isTouch}]"
+        <div :class="['timeline animate__animated animate__fadeIn', {'is-centered':!isTouch}]"
             v-for="(day, index) in feed"
             :key="`${day}-${index}`"
             v-else>
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import 'animate.css';
 import { mapState } from 'vuex';
 import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
