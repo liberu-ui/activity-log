@@ -4,30 +4,31 @@
             v-if="!feed.length">
             {{ i18n('No activity found') }}
         </h4>
-        <div :class="['timeline animate__animated animate__fadeIn', {'is-centered':!isTouch}]"
-            v-for="(day, index) in feed"
-            :key="`${day}-${index}`"
-            v-else>
-            <header class="timeline-header">
-                <span class="tag is-medium is-bold is-primary">
-                    {{ formatDate(day.date) }}
-                </span>
-            </header>
-            <div class="timeline-item"
-                v-for="event in day.entries"
-                :key="event.id">
-                <div class="timeline-marker is-icon"
-                    :class="event.meta.iconClass">
-                    <span class="icon is-small has-text-white">
-                        <fa :icon="event.meta.icon"
-                            size="xs"/>
+        <fade v-else>
+            <div :class="['timeline', {'is-centered':!isTouch}]"
+                v-for="(day, index) in feed"
+                :key="`${day}-${index}`">
+                <header class="timeline-header">
+                    <span class="tag is-medium is-bold is-primary">
+                        {{ formatDate(day.date) }}
                     </span>
-                </div>
-                <div class="timeline-content">
-                    <event :event="event"/>
+                </header>
+                <div class="timeline-item"
+                    v-for="event in day.entries"
+                    :key="event.id">
+                    <div class="timeline-marker is-icon"
+                        :class="event.meta.iconClass">
+                        <span class="icon is-small has-text-white">
+                            <fa :icon="event.meta.icon"
+                                size="xs"/>
+                        </span>
+                    </div>
+                    <div class="timeline-content">
+                        <event :event="event"/>
+                    </div>
                 </div>
             </div>
-        </div>
+        </fade>
         <div class="has-text-centered"
             v-if="feed.length">
             <button :class="['button', {'is-loading': loading}]"
@@ -39,7 +40,7 @@
 </template>
 
 <script>
-import 'animate.css';
+import { Fade } from '@enso-ui/transitions';
 import { mapState } from 'vuex';
 import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -54,7 +55,7 @@ library.add(faSpinner, faSyncAlt, faPlus, faPencilAlt, faTrashAlt, faFlag);
 export default {
     name: 'Timeline',
 
-    components: { Fa, Event },
+    components: { Fa, Fade, Event },
 
     inject: ['i18n'],
 
