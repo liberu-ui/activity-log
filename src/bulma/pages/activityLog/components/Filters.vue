@@ -57,6 +57,8 @@ export default {
         },
     },
 
+    emits: ['reload'],
+
     computed: {
         ...mapState(['enums']),
     },
