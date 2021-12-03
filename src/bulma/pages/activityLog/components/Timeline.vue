@@ -70,6 +70,8 @@ export default {
         },
     },
 
+    emits: ['load-more'],
+
     computed: {
         ...mapState('layout', ['isTouch']),
         days() {
