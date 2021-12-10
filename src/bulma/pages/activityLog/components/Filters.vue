@@ -17,16 +17,16 @@
             <p class="has-text-centered">
                 <strong>{{ i18n('What') }}</strong>
             </p>
-            <select-filter multiple
+            <select-filter compact multiple
                 source="system.roles.options"
                 :placeholder="i18n('Roles')"
                 v-model="filters.roleIds"/>
-            <select-filter multiple
+            <select-filter compact multiple
                 source="administration.users.options"
                 label="person.name"
                 :placeholder="i18n('Authors')"
                 v-model="filters.userIds"/>
-            <select-filter multiple
+            <select-filter compact multiple
                 :options="enums.loggableEvents._select()"
                 :placeholder="i18n('Events')"
                 v-model="filters.events"/>
