@@ -11,8 +11,8 @@
             </span>
         </button>
         <enso-date-filter class="box raises-on-hover mt-3"
-            value="today"
-            @update="filters.interval = $event"/>
+            v-model:filter="dateFilter"
+            v-model:interval="filters.interval"/>
         <div class="box p-2 raises-on-hover has-background-light">
             <p class="has-text-centered">
                 <strong>{{ i18n('What') }}</strong>
@@ -58,6 +58,10 @@ export default {
     },
 
     emits: ['reload'],
+
+    data: () => ({
+       dateFilter: "today",
+    }),
 
     computed: {
         ...mapState(['enums']),
