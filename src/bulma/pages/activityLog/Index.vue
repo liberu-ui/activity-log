@@ -19,7 +19,7 @@ import Filters from './components/Filters.vue';
 export default {
     name: 'Index',
 
-    inject: ['errorHandler', 'route'],
+    inject: ['errorHandler', 'http', 'route'],
 
     components: { Timeline, Filters },
 
@@ -47,9 +47,9 @@ export default {
                 this.axiosRequest.cancel();
             }
 
-            this.axiosRequest = axios.CancelToken.source();
+            this.axiosRequest = this.http.CancelToken.source();
 
-            axios.get(this.route('core.activityLogs.index'), {
+            this.http.get(this.route('core.activityLogs.index'), {
                 params: { offset: this.offset, filters: this.filters },
                 cancelToken: this.axiosRequest.token,
             }).then(({ data }) => {
@@ -65,7 +65,7 @@ export default {
                 this.loading = false;
                 this.ready = true;
             }).catch((error) => {
-                if (axios.isCancel(error)) {
+                if (this.http.isCancel(error)) {
                     this.axiosRequest = null;
                     return;
                 }
