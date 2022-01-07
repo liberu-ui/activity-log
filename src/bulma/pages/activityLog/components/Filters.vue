@@ -60,7 +60,7 @@ export default {
     emits: ['reload'],
 
     data: () => ({
-       dateFilter: "today",
+        dateFilter: 'today',
     }),
 
     computed: {

@@ -19,9 +19,9 @@ import Filters from './components/Filters.vue';
 export default {
     name: 'Index',
 
-    inject: ['errorHandler', 'http', 'route'],
-
     components: { Timeline, Filters },
+
+    inject: ['errorHandler', 'http', 'route'],
 
     data: () => ({
         loading: false,
@@ -64,7 +64,7 @@ export default {
                 this.offset += length;
                 this.loading = false;
                 this.ready = true;
-            }).catch((error) => {
+            }).catch(error => {
                 if (this.http.isCancel(error)) {
                     this.axiosRequest = null;
                     return;
