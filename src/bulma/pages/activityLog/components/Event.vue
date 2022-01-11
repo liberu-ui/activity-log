@@ -42,7 +42,7 @@ export default {
         parsedMessage() {
             return Array.isArray(this.event.meta.message)
                 ? this.event.meta.message
-                    .map((segment) => this.i18n(segment))
+                    .map(segment => this.i18n(segment))
                     .join(' ')
                 : this.event.meta.message;
         },
