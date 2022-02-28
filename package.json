@@ -23,7 +23,7 @@
   "dependencies": {
     "@enso-ui/filters": "^3.0",
     "@enso-ui/transitions": "^2.0",
-    "@enso-ui/ui": "^5.0",
+    "@enso-ui/ui": "^6.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/vue-fontawesome": "3.0.0-5",
