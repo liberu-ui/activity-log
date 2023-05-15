@@ -7,7 +7,7 @@
 ![npm version](https://img.shields.io/npm/v/@enso-ui/activity-log.svg) 
 
 ## Usage
-The component cannot be used outside of the Enso ecosystem.
+The component cannot be used outside of the Liberu ecosystem.
 
 ### Demo
 
@@ -21,7 +21,7 @@ For live examples and demos, you may visit [laravel-enso.com](https://www.larave
 
 are welcome. Pull requests are great, but issues are good too.
 
-Thank you to all the people who already contributed to Enso!
+Thank you to all the people who already contributed to Liberu!
 
 ## License
 

@@ -1,5 +1,5 @@
 {
-  "name": "@cgdsoftware/activity-log",
+  "name": "@liberu-ui/activity-log",
   "version": "5.0.0",
   "description": "Basic Activity Log package",
   "main": "src/bulma/pages/activityLog/Index.vue",
@@ -21,9 +21,9 @@
   },
   "homepage": "https://github.com/enso-ui/activity-log#readme",
   "dependencies": {
-    "@cgdsoftware/filters": "^3.0",
-    "@cgdsoftware/transitions": "^2.0",
-    "@cgdsoftware/ui": "^6.0",
+    "@liberu-ui/filters": "^3.0",
+    "@liberu-ui/transitions": "^2.0",
+    "@liberu-ui/ui": "^6.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/vue-fontawesome": "3.0.0-5",
