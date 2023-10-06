@@ -40,14 +40,14 @@
 </template>
 
 <script>
-import { Fade } from '@enso-ui/transitions';
+import { Fade } from '@liberu-ui/transitions';
 import { mapState } from 'vuex';
 import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
     faSpinner, faSyncAlt, faPlus, faPencilAlt, faTrashAlt, faFlag,
 } from '@fortawesome/free-solid-svg-icons';
-import format from '@enso-ui/ui/src/modules/plugins/date-fns/format';
+import format from '@liberu-ui/ui/src/modules/plugins/date-fns/format';
 import Event from './Event.vue';
 
 library.add(faSpinner, faSyncAlt, faPlus, faPencilAlt, faTrashAlt, faFlag);

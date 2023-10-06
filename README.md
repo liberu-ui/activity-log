@@ -1,10 +1,10 @@
 # Activity Log
 
-![npm license](https://img.shields.io/npm/l/@enso-ui/activity-log.svg) 
-![npm download](https://img.shields.io/npm/dm/@enso-ui/activity-log.svg) 
-![GitHub top language](https://img.shields.io/github/languages/top/enso-ui/activity-log.svg) 
-![GitHub issues](https://img.shields.io/github/issues/enso-ui/activity-log.svg) 
-![npm version](https://img.shields.io/npm/v/@enso-ui/activity-log.svg) 
+![npm license](https://img.shields.io/npm/l/@liberu-ui/activity-log.svg) 
+![npm download](https://img.shields.io/npm/dm/@liberu-ui/activity-log.svg) 
+![GitHub top language](https://img.shields.io/github/languages/top/liberu-ui/activity-log.svg) 
+![GitHub issues](https://img.shields.io/github/issues/liberu-ui/activity-log.svg) 
+![npm version](https://img.shields.io/npm/v/@liberu-ui/activity-log.svg) 
 
 ## Usage
 The component cannot be used outside of the Liberu ecosystem.

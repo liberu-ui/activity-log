@@ -37,7 +37,7 @@
 <script>
 import { mapState } from 'vuex';
 import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
-import { EnsoDateFilter, EnsoSelectFilter as SelectFilter } from '@enso-ui/filters/bulma';
+import { EnsoDateFilter, EnsoSelectFilter as SelectFilter } from '@liberu-ui/filters/bulma';
 
 export default {
     name: 'Filters',

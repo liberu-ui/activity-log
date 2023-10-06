@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/enso-ui/activity-log.git"
+    "url": "git+https://github.com/liberu-ui/activity-log.git"
   },
   "keywords": [
     "activity-log",
@@ -17,9 +17,9 @@
   "author": "Adrian Ocneanu <aocneanu@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/enso-ui/activity-log/issues"
+    "url": "https://github.com/liberu-ui/activity-log/issues"
   },
-  "homepage": "https://github.com/enso-ui/activity-log#readme",
+  "homepage": "https://github.com/liberu-ui/activity-log#readme",
   "dependencies": {
     "@liberu-ui/filters": "^3.0",
     "@liberu-ui/transitions": "^2.0",
