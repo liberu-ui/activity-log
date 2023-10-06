@@ -1,6 +1,6 @@
 {
   "name": "@liberu-ui/activity-log",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "description": "Basic Activity Log package",
   "main": "src/bulma/pages/activityLog/Index.vue",
   "scripts": {
